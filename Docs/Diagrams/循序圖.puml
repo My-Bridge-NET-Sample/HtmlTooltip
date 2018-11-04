@@ -1,0 +1,15 @@
+@startuml
+
+Browser -> Tooltip
+Tooltip -> StateMachine : HandleEvent
+StateMachine -> TransitionFunction : HandleEvent
+TransitionFunction --> StateMachine : Next State
+TransitionFunction -> StateMachine : StartTicker
+TransitionFunction -> StateMachine : StartPauseTimer
+TransitionFunction -> StateMachine : StartDisplayTimer
+TransitionFunction -> Tooltip : SaveCursorPosition
+TransitionFunction -> Tooltip : MoveTo
+TransitionFunction -> Tooltip : Fade
+
+
+@enduml

@@ -1,0 +1,36 @@
+@startuml
+skinparam state {
+  FontName "Noto Sans CJK TC Medium"
+  FontSize 14
+}
+
+skinparam arrow {
+  FontName "Noto Sans CJK TC Light"
+  FontSize 11
+}
+
+state 未啟動 {
+}
+
+state 暫停 {
+}
+
+state 淡入 {
+}
+
+state 顯示 {
+}
+
+state 淡出 {
+}
+
+[*] -right-> 未啟動
+未啟動 -up-> 暫停 : **滑鼠懸停**
+暫停 -right-> 淡入 : **時間到**
+淡入 --> 淡入 : **計時器**
+淡入 --> 顯示
+顯示 --> 淡出 : **時間到**
+淡出 --> 淡出 : **計時器**
+淡出 -left-> 未啟動
+
+@enduml

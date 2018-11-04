@@ -1,0 +1,27 @@
+H3 {
+    border: 1px solid #b3b3b3;
+    margin-top: 0.3in;
+    margin-bottom: 0;
+    padding: 0.1in;
+    font: 14pt "Arial", sans-serif;
+    background: #b3b3b3;
+    color: black;
+}
+
+.TestStyle {
+    border: none;
+    margin: 0.1in;
+    padding: 0.1in;
+    font: 10pt "Lucida", sans-serif;
+    background: #e6e6ff;
+}
+
+.AnotherTestStyle {
+    min-width: 25px;
+    max-width: 350px;
+    padding: 5px;
+    height: auto;
+    border: 1px solid black;
+    font-family: sans-serif;
+    background-color: wheat;
+}

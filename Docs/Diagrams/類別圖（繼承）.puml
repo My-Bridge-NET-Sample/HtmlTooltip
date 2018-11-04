@@ -1,0 +1,57 @@
+@startuml
+skinparam class {
+  FontName "Noto Sans CJK TC Medium"
+  FontSize 14
+  AttributeFontName "Noto Sans CJK TC Medium"
+  AttributeFontSize 11
+}
+
+class TransitionFunction {
+    -InitEventHandlers()
+    +HandledEvent()
+    +OnMouseMove()
+    +OnMouseOut()
+    +OnMouseOver()
+    +OnTimeOut()
+    +OnTimeTicks()
+}
+
+class FadeInState {
+    +MouseMove()
+    +MouseOut()
+    +OnTimeTicks()
+}
+
+class FadeOutState {
+    +OnMouseMove()
+    +OnMouseOut()
+    +OnMouseOver()
+    +OnTimeTicks()
+}
+
+class InactiveState {
+    +OnMouseMove()
+    +OnMouseOut()
+    +OnMouseOver()
+}
+
+class DisplayState {
+    +MouseMove()
+    +MouseOut()
+    +TimeOut()
+}
+
+class PauseState {
+    +OnMouseMove()
+    +OnMouseOut()
+    +OnTimeOut()
+}
+
+
+TransitionFunction <|-- FadeInState
+TransitionFunction <|--- FadeOutState
+TransitionFunction <|-- InactiveState
+TransitionFunction <|--- DisplayState
+TransitionFunction <|-- PauseState
+
+@enduml

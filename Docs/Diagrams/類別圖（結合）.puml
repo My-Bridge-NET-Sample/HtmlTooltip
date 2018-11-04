@@ -1,0 +1,21 @@
+@startuml
+skinparam class {
+  FontName "Noto Sans CJK TC Medium"
+  FontSize 14
+  AttributeFontName "Noto Sans CJK TC Medium"
+  AttributeFontSize 11
+}
+
+class StateMachine {
+}
+
+class Tooltip {
+}
+
+class TransitionFunction {
+}
+
+Tooltip "1" *-- "1" StateMachine
+StateMachine "1" *-- "*" TransitionFunction
+
+@enduml
